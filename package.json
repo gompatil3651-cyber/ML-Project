@@ -1,0 +1,16 @@
+{
+  "name": "stock-insight-root",
+  "version": "1.0.0",
+  "description": "Stock Insight root workspace scripts",
+  "scripts": {
+    "dev": "npm --prefix backend run dev",
+    "start": "npm --prefix backend start",
+    "install:backend": "npm --prefix backend install",
+    "test": "npm --prefix backend test",
+    "test:backend": "npm --prefix backend test",
+    "test:microservices": "python -m pytest microservices/tests",
+    "test:all": "npm test && npm run test:microservices",
+    "python:dev": "python -m uvicorn microservices.app.main:app --host 127.0.0.1 --port 8000 --reload",
+    "frontend:dev": "streamlit run frontend/app.py"
+  }
+}
